@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <header class="site-header">
@@ -23,35 +25,44 @@
             </div>
         </div>
     </header>
-    
+
     <div class="main-content">
-        <h1 class="site-heading">Choose your favourite fruits</h1>
-        <form class="main-form" action="https://echo.htmlacademy.ru" method="post">
-            <label class="label">
-                <input class="checkbox checkbox-apple visually-hidden" name="fruits" value="apple" type="checkbox">
-                <span class="checkbox-controller"></span>
-                <span class="checkbox-text">Apple</span>
-            </label>
-            <label class="label">
-                <input class="checkbox checkbox-orange visually-hidden" name="fruits" value="orange" type="checkbox">
-                <span class="checkbox-controller"></span>
-                <span class="checkbox-text">Orange</span>
-            </label>
-            <label class="label">
-                <input class="checkbox checkbox-banana visually-hidden" name="fruits" value="banana" type="checkbox">
-                <span class="checkbox-controller"></span>
-                <span class="checkbox-text">Banana</span>
-            </label>
-            <label class="label">
-                <input class="checkbox checkbox-pine-apple visually-hidden" name="fruits" value="pine-apple" type="checkbox">
-                <span class="checkbox-controller"></span>
-                <span class="checkbox-text">Pine apple</span>
-            </label>
-            <input class="email" type="email" name="email" placeholder="Email" aria-label="email" required pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$">
-            <input class="submit" type="submit">
-        </form>
+        
+        <div class="container">
+            <h1 class="site-heading">Choose your favourite fruits</h1>
+            <form class="main-form" action="https://echo.htmlacademy.ru" method="post">
+                <label class="label">
+                    <input class="checkbox checkbox-apple visually-hidden" name="fruits" value="apple" type="checkbox">
+                    <span class="checkbox-controller"></span>
+                    <span class="checkbox-text">Apple</span>
+                </label>
+                <label class="label">
+                    <input class="checkbox checkbox-orange visually-hidden" name="fruits" value="orange"
+                        type="checkbox">
+                    <span class="checkbox-controller"></span>
+                    <span class="checkbox-text">Orange</span>
+                </label>
+                <label class="label">
+                    <input class="checkbox checkbox-banana visually-hidden" name="fruits" value="banana"
+                        type="checkbox">
+                    <span class="checkbox-controller"></span>
+                    <span class="checkbox-text">Banana</span>
+                </label>
+                <label class="label">
+                    <input class="checkbox checkbox-pine-apple visually-hidden" name="fruits" value="pine-apple"
+                        type="checkbox">
+                    <span class="checkbox-controller"></span>
+                    <span class="checkbox-text">Pine apple</span>
+                </label>
+                <input class="email" type="email" name="email" placeholder="Email" aria-label="email" required
+                    pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$">
+                <input class="submit" type="submit">
+            </form>
+        </div>
+
     </div>
 
     <script src="js/main.js"></script>
 </body>
+
 </html>
