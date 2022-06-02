@@ -1,8 +1,8 @@
-const elToggle = document.querySelector(".toggle");
+const elDarkModeToggle = document.querySelector(".dark-mode-toggle");
 const elCircle = document.querySelector(".circle");
 const elHeaderText = document.querySelector(".header-text");
 
-elToggle.addEventListener("click", function () {
+elDarkModeToggle.addEventListener("click", function () {
   elCircle.classList.toggle("move");
   document.body.classList.toggle("dark-mode");
   if (elHeaderText.textContent === "Dark mode") {

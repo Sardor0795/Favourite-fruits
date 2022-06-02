@@ -5,13 +5,15 @@
   --body-bg: #f2f2f2;
   --text-color: #111517;
   --border-color: #fff;
+  --focus-color: #1052e1;
 }
 
 .dark-mode {
-  --main-bg: #2b3844;
-  --body-bg: #202c36;
+  --main-bg: #212121;
+  --body-bg: #111111;
   --text-color: #fff;
-  --border-color: #275ccebe;
+  --focus-color: #fe641c;
+  --border-color: var(--focus-color);
 }
 
 html {
@@ -120,12 +122,33 @@ button {
   margin-right: auto;
   font-weight: 800;
   font-size: 20px;
+  flex-shrink: 0;
   color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.site-logo:hover {
+  color: var(--focus-color);
 }
 
 .dark-mode-toggle {
   display: flex;
   align-items: center;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  color: var(--focus-color);
+}
+
+.dark-mode-toggle:hover .toggle {
+  border-color: var(--focus-color);
+}
+
+.dark-mode-toggle:hover .toggle .circle {
+  background-color: var(--focus-color);
 }
 
 .header-text {
@@ -161,13 +184,19 @@ button {
 
 .site-heading {
   color: var(--text-color);
+  text-align: center;
   margin-bottom: 50px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.site-heading:hover {
+  color: var(--focus-color);
 }
 
 /* FORM */
 
 .main-form {
-  min-width: 300px;
   margin-right: auto;
   margin-left: auto;
   display: flex;
@@ -177,6 +206,7 @@ button {
   background-color: var(--main-bg);
   padding: 30px;
   border-radius: 10px;
+  max-width: 320px;
 }
 
 .label {
@@ -191,7 +221,7 @@ button {
 }
 
 .checkbox:focus + .checkbox-controller {
-  box-shadow: 0 0 0 5px #275ccebe;
+  box-shadow: 0 0 0 5px var(--focus-color);
 }
 
 .checkbox-controller {
@@ -210,30 +240,35 @@ button {
 .checkbox-text {
   font-weight: 700;
   color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.label:hover .checkbox-text {
+  color: var(--focus-color);
 }
 
 .checkbox-apple:checked + .checkbox-controller {
-  background-image: url("../img/apple.png");
+  background-image: url("../img/apple.jpg");
 }
 
 .checkbox-apple:checked ~ .checkbox-text {
-  color: #275ccebe;
+  color: var(--focus-color);
 }
 
 .checkbox-orange:checked + .checkbox-controller {
-  background-image: url("../img/orange.png");
+  background-image: url("../img/orange.jpg");
 }
 
 .checkbox-orange:checked ~ .checkbox-text {
-  color: #275ccebe;
+  color: var(--focus-color);
 }
 
 .checkbox-banana:checked + .checkbox-controller {
-  background-image: url("../img/banana.png");
+  background-image: url("../img/banana.jpg");
 }
 
 .checkbox-banana:checked ~ .checkbox-text {
-  color: #275ccebe;
+  color: var(--focus-color);
 }
 
 .checkbox-pine-apple:checked + .checkbox-controller {
@@ -241,7 +276,7 @@ button {
 }
 
 .checkbox-pine-apple:checked ~ .checkbox-text {
-  color: #275ccebe;
+  color: var(--focus-color);
 }
 
 /* EMAIL */
